@@ -34,21 +34,21 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:text="@string/_2465_latham_st"
-            android:textSize="24sp" />
+            android:textSize="32sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/mountain_view_ca_94043"
-            android:textSize="24sp" />
+            android:textSize="32sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/_650_555_5555"
-            android:textSize="24sp" />
+            android:textSize="32sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,19 +58,19 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="60dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:src="@drawable/pc" />
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="60dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:src="@drawable/drive" />
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="60dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:src="@drawable/ml" />
 
@@ -83,19 +83,19 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="60dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:src="@drawable/android" />
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="60dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:src="@drawable/fullstack" />
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="60dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:src="@drawable/data_analyst" />
         </LinearLayout>
@@ -108,7 +108,7 @@
             android:layout_marginTop="22dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/click_and_start_to_learn"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textColor="@android:color/white" />
     </LinearLayout>
 </LinearLayout>

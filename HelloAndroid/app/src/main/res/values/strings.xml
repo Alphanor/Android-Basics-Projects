@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HelloAndroid</string>
+    <string name="click_and_start_to_learn">CLick and start to learn!</string>
+    <string name="_2465_latham_st">2465 Latham St</string>
+    <string name="mountain_view_ca_94043">Mountain View, CA 94043</string>
+    <string name="_650_555_5555">650-555-5555</string>
 </resources>
