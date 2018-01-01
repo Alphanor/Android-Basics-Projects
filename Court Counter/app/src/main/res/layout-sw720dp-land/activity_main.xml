@@ -26,7 +26,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/teamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
@@ -34,7 +33,7 @@
                 android:padding="16dp"
                 android:text="@string/team_a"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="62sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -46,7 +45,7 @@
                 android:paddingBottom="24dp"
                 android:text="@string/_0"
                 android:textColor="#ffffff"
-                android:textSize="56sp" />
+                android:textSize="92sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -64,7 +63,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTwoforTeamA"
-                android:text="@string/_2_points" />
+                android:text="@string/_2_points"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -99,7 +98,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/teamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
@@ -107,7 +105,7 @@
                 android:padding="16dp"
                 android:text="@string/team_b"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="62sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -119,7 +117,7 @@
                 android:paddingBottom="24dp"
                 android:text="@string/_0"
                 android:textColor="#ffffff"
-                android:textSize="56sp" />
+                android:textSize="92sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -163,7 +161,6 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset_the_score"

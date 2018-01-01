@@ -34,7 +34,7 @@
                 android:padding="12dp"
                 android:text="@string/team_a"
                 android:textColor="#FFFFFF"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -43,10 +43,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:paddingBottom="16dp"
+                android:paddingBottom="8dp"
                 android:text="@string/_0"
                 android:textColor="#ffffff"
-                android:textSize="52sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -81,7 +81,6 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
                 android:onClick="undoLastTeamA"
                 android:text="@string/return_back" />
         </LinearLayout>
@@ -106,7 +105,7 @@
                 android:padding="12dp"
                 android:text="@string/team_b"
                 android:textColor="#FFFFFF"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -115,10 +114,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:paddingBottom="16dp"
+                android:paddingBottom="8dp"
                 android:text="@string/_0"
                 android:textColor="#ffffff"
-                android:textSize="56sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -154,7 +153,6 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="22dp"
                 android:layout_marginRight="22dp"
-                android:layout_marginTop="8dp"
                 android:onClick="undoLastTeamB"
                 android:text="@string/return_back" />
         </LinearLayout>
@@ -167,6 +165,14 @@
         android:text="@string/reset_the_score"
         android:layout_below="@id/rootView"
         android:onClick="resetScore"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/teamNameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Name"
         android:layout_centerHorizontal="true"/>
 
     <Button

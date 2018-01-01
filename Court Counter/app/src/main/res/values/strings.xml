@@ -25,4 +25,8 @@
     <string name="return_back">Return Back</string>
     <string name="reset_the_score">Reset the score!</string>
     <string name="todo">TODO</string>
+    <string name="teams_name">TEAMS NAME</string>
+    <string name="name_of_the_first_team">Name of the first team:</string>
+    <string name="name_of_the_second_team">Name of the second team:</string>
+    <string name="ok">Ok</string>
 </resources>
