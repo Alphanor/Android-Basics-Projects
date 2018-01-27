@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="ALPHANOR"
+            android:text="@string/alphanor"
             android:textColor="#000000"
             android:textSize="24sp" />
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:text="Introvert | Student | Passionate Learner | Programmer | Reader | Speedcuber | Dreamer"
+            android:text="@string/introvert_student_passionate_learner_programmer_reader_speedcuber_dreamer"
             android:textAlignment="center"
             android:textColor="@android:color/darker_gray"
             android:textSize="16sp" />
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Lives in Rome - Italy"/>
+                android:text="@string/lives_in_rome_italy"/>
 
         </LinearLayout>
 
@@ -103,12 +103,12 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_school_black_24dp"/>
+                android:src="@drawable/ic_school_black_24dp" android:contentDescription="@string/todo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" High School Student"/>
+                android:text="@string/high_school_student"/>
 
         </LinearLayout>
 
@@ -122,12 +122,12 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_computer_black_24dp"/>
+                android:src="@drawable/ic_computer_black_24dp" android:contentDescription="@string/todo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Android Developer"/>
+                android:text="@string/android_developer"/>
 
         </LinearLayout>
 
@@ -153,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#212121"
-            android:text="Github"
+            android:text="@string/github"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -163,7 +163,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:background="@android:color/holo_blue_bright"
-            android:text="Udacity"
+            android:text="@string/udacity"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -171,7 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Quora"
+            android:text="@string/quora"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

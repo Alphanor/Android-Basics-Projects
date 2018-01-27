@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Card</string>
+    <string name="quora">Quora</string>
+    <string name="github">Github</string>
+    <string name="udacity">Udacity</string>
+    <string name="introvert_student_passionate_learner_programmer_reader_speedcuber_dreamer">Introvert | Student | Passionate Learner | Programmer | Reader | Speedcuber | Dreamer</string>
+    <string name="alphanor">ALPHANOR</string>
+    <string name="lives_in_rome_italy">Lives in Rome - Italy</string>
+    <string name="high_school_student">High School Student</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="todo">TODO</string>
 </resources>
