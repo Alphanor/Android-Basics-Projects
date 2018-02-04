@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">PCQuizApp</string>
+    <string name="what_type_of_device_is_a_computer_monitor">What type of device is a computer monitor?</string>
+    <string name="output">Output</string>
+    <string name="storage">Storage</string>
+    <string name="_1_gbit_s">1 Gbit/s</string>
+    <string name="no_moving_parts">No Moving Parts</string>
+    <string name="input">Input</string>
+    <string name="what_does_bios_stand_for">What does BIOS stand for?</string>
+    <string name="write_here">Write here...</string>
+    <string name="what_is_the_transfer_rate_of_a_standard_usb_2_0_device">What is the transfer rate of a standard USB 2.0 Device?</string>
+    <string name="_480_mbit_s">480 Mbit/s</string>
+    <string name="_250_mbit_s">250 Mbit/s</string>
+    <string name="who_invented_the_x86_standard">Who invented the x86 standard?</string>
+    <string name="why_are_ssds_superior_to_standard_hard_drive_technology">Why are SSDs superior to standard Hard Drive Technology?</string>
+    <string name="storage_space">Storage space</string>
+    <string name="speed_capacities">Speed capacities</string>
+    <string name="current_price">Current price</string>
+    <string name="what_does_gpu_stand_for">What does GPU stand for?</string>
+    <string name="how_many_mhz_are_in_3_65_ghz">How many MHz are in 3.65 GHz?</string>
+    <string name="_3650">3650</string>
+    <string name="_36_5">36.5</string>
+    <string name="_365">365</string>
+    <string name="_0_36">0.36</string>
+    <string name="which_of_them_are_object_oriented_programming_languages">Which of them are object oriented programming languages?</string>
+    <string name="ruby">Ruby</string>
+    <string name="java">Java</string>
+    <string name="perl">Perl</string>
+    <string name="pascal">Pascal</string>
+    <string name="who_founded_microsoft">Who founded Microsoft?</string>
+    <string name="send_the_result">SEND THE RESULT</string>
+    <string name="todo">TODO</string>
+    <string-array name="company_choose">
+        <item>IBM</item>
+        <item>AMD</item>
+        <item>Via</item>
+        <item>Cyrix</item>
+        <item>Intel</item>
+    </string-array>
+    <string-array name="founder_choose">
+        <item>Steve Jobs</item>
+        <item>Alan Turing</item>
+        <item>Satya Nadella</item>
+        <item>Bill Gates</item>
+        <item>Larry Page</item>
+    </string-array>
+</resources>
