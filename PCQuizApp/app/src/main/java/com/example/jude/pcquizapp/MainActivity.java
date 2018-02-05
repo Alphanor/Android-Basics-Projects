@@ -1,5 +1,7 @@
 package com.example.jude.pcquizapp;
 
+import android.app.NotificationManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -109,7 +111,20 @@ public class MainActivity extends AppCompatActivity {
         if(spinner2.getSelectedItem().equals("Bill Gates"))
             score+=1;
 
-        Toast.makeText(this, "You final result is "+score+" out of 10!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You final result is "+score+" out of 9!", Toast.LENGTH_LONG).show();
+
+        String name = getIntent().getStringExtra("USER_NAME");
+
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.icon)
+                        .setContentTitle("Dear "+name)
+                        .setContentText("Your final result is "+score+" out of 9!");
+
+        NotificationManager mNotifyMgr =
+                (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        mNotifyMgr.notify(001, mBuilder.build());
 
         score=0;
     }
