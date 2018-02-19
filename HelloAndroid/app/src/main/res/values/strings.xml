@@ -4,4 +4,10 @@
     <string name="_2465_latham_st">2465 Latham St</string>
     <string name="mountain_view_ca_94043">Mountain View, CA 94043</string>
     <string name="_650_555_5555">650-555-5555</string>
+    <string name="udacity_image">Udacity image</string>
+    <string name="pc_image">PC image</string>
+    <string name="machine_learning_image">Machine Learning image</string>
+    <string name="android_image">Android image</string>
+    <string name="drive_image">Drive image</string>
+    <string name="data_analyst_image">Data Analyst image</string>
 </resources>

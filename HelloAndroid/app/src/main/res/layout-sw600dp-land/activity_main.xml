@@ -25,7 +25,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@drawable/udacity_land" />
+                android:src="@drawable/udacity_land"
+                android:contentDescription="@string/udacity_image"/>
 
         </LinearLayout>
 
@@ -56,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/_650_555_5555"
+                android:autoLink="phone"
                 android:textSize="30sp" />
 
             <LinearLayout
@@ -68,19 +70,22 @@
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:src="@drawable/pc" />
+                    android:src="@drawable/pc"
+                    android:contentDescription="@string/pc_image"/>
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:src="@drawable/drive" />
+                    android:src="@drawable/drive"
+                    android:contentDescription="@string/drive_image"/>
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:src="@drawable/ml" />
+                    android:src="@drawable/ml"
+                    android:contentDescription="@string/machine_learning_image"/>
 
             </LinearLayout>
 
@@ -94,19 +99,22 @@
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:src="@drawable/android" />
+                    android:src="@drawable/android"
+                    android:contentDescription="@string/android_image"/>
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:src="@drawable/fullstack" />
+                    android:src="@drawable/fullstack"
+                    android:contentDescription="full_stack_image"/>
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:src="@drawable/data_analyst" />
+                    android:src="@drawable/data_analyst"
+                    android:contentDescription="@string/data_analyst_image"/>
             </LinearLayout>
 
             <Button
