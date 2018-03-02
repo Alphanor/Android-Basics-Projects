@@ -9,9 +9,10 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/court"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:layout_centerInParent="true" android:contentDescription="@string/todo" />
+        android:src="@drawable/court" />
 
     <LinearLayout
         android:id="@+id/rootView"
@@ -163,26 +164,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reset_the_score"
         android:layout_below="@id/rootView"
+        android:layout_centerHorizontal="true"
         android:onClick="resetScore"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/reset_the_score" />
 
     <Button
         android:id="@+id/teamNameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="64dp"
-        android:text="name"
-        android:layout_centerHorizontal="true"/>
+        android:text="name" />
 
-  <Button
-      android:id="@+id/finish_button"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:text="@string/finish_the_match"
-      android:layout_alignParentBottom="true"
-      android:onClick="scoreComparation" />
-    
+    <Button
+        android:id="@+id/finish_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="scoreComparation"
+        android:text="@string/finish_the_match" />
+
 </RelativeLayout>
 

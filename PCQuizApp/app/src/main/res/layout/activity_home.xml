@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    >
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,7 +17,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/todo"
             android:scaleType="centerCrop"
-            android:src="@drawable/circuit" />
+            android:src="@drawable/circuit2" />
 
 
         <TextView
@@ -24,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="monospace"
             android:gravity="center"
             android:text="Computer Knowledge"
@@ -47,26 +48,54 @@
             android:layout_below="@id/pc_image"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="Insert your name to start the quiz"
+            android:text="Welcome to the PCQuizApp!"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/detailTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTextview"
+            android:gravity="center"
+            android:text="Insert your name and surname to start the quiz!"
             android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/name_edittext"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/nameTextview"
+            android:layout_below="@id/detailTextview"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:hint="Insert your name..."
             android:maxLines="1"
-            android:textColorHint="#ffffff"/>
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:backgroundTint="#007fff "
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/surname_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_edittext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Insert your surname..."
+            android:maxLines="1"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:backgroundTint="#007fff"
+            android:inputType="text"/>
 
         <Button
             android:id="@+id/start_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/name_edittext"
+            android:layout_below="@id/surname_edittext"
             android:layout_centerHorizontal="true"
             android:onClick="startActivity"
             android:text="START" />

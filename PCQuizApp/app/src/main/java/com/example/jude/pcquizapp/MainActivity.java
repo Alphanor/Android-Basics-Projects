@@ -1,6 +1,7 @@
 package com.example.jude.pcquizapp;
 
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         comparation = secondAnswer.getText().toString().toLowerCase();
 
-        if(comparation.equals("basic input output system"))
+        if(comparation.toLowerCase().equals("basic input output system"))
             score+=1;
 
         if(secondAnswerThirdQuestion.isChecked())
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         comparation = sixthAnswer.getText().toString().toLowerCase();
 
-        if(comparation.equals("graphic processing unit"))
+        if(comparation.toLowerCase().equals("graphic processing unit"))
             score+=1;
 
         if(firstAnswerSeventhQuestion.isChecked())
@@ -114,17 +115,25 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "You final result is "+score+" out of 9!", Toast.LENGTH_LONG).show();
 
         String name = getIntent().getStringExtra("USER_NAME");
+        String surname = getIntent().getStringExtra("SURNAME");
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.icon)
-                        .setContentTitle("Dear "+name)
+                        .setContentTitle("Dear "+name+" "+surname)
                         .setContentText("Your final result is "+score+" out of 9!");
 
         NotificationManager mNotifyMgr =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         mNotifyMgr.notify(001, mBuilder.build());
+
+        String percentage = String.format("%.2f", (score/9)*100);
+
+        Intent intent = new Intent(this, Result.class);
+        intent.putExtra("percentage_result", percentage);
+        intent.putExtra("score", String.valueOf(score));
+        startActivity(intent);
 
         score=0;
     }

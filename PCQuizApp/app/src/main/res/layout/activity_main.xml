@@ -15,8 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/wallpaper"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            android:src="@drawable/wallpaper" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -410,10 +410,10 @@
             android:id="@+id/sendButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/send_the_result"
-            android:textColor="#ffffff"
             android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/send_the_result"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
 
