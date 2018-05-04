@@ -31,14 +31,14 @@ public class Result extends AppCompatActivity {
         String percentage = getIntent().getStringExtra("percentage_result");
         score = getIntent().getStringExtra("score");
 
-        percentageTextView.setText(percentage+"%");
+        percentageTextView.setText(percentage + "%");
 
-        if(Float.parseFloat(percentage)<=25)
-            detailsTextView.setText("Your result isn't good, you have a lot to learn to be able to compete in our technological world!");
-        else if(Float.parseFloat(percentage)>25 && Float.parseFloat(percentage)<=50)
+        if (Float.parseFloat(percentage) <= 25)
+            detailsTextView.setText("Your result isn't good, you have a lot to learn to compete in our technological world!");
+        else if (Float.parseFloat(percentage) > 25 && Float.parseFloat(percentage) <= 50)
             detailsTextView.setText("You are not that much bad, but you have to stay update if you want to be relevant.");
-        else if(Float.parseFloat(percentage)>50 && Float.parseFloat(percentage)<=75)
-            detailsTextView.setText("You are surely better than the majority of the people. Keep up the good knowledge.");
+        else if (Float.parseFloat(percentage) > 50 && Float.parseFloat(percentage) <= 75)
+            detailsTextView.setText("You are surely better than the majority of the people. Keep up the good work.");
         else
             detailsTextView.setText("You are a complete geek and your friends require your help for every tech problem. ");
 
@@ -54,7 +54,7 @@ public class Result extends AppCompatActivity {
             public void onClick(View view) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "I have scored "+score+" "+"out of 9 on the PCAppQuiz. Check it out!");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I have scored " + score + " " + "out of 9 on the PCAppQuiz. Check it out!");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }

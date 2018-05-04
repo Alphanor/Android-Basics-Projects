@@ -32,13 +32,11 @@ public class Home extends AppCompatActivity {
         String name = editTextName.getText().toString();
         String surname = editTextSurname.getText().toString();
 
-        if(name.equals(null) || name.length()<2) {
+        if (name.equals(null) || name.length() < 2) {
             Toast.makeText(this, "Plase write your name!", Toast.LENGTH_SHORT).show();
-        }
-        else if(surname.equals(null) || surname.length()<2) {
+        } else if (surname.equals(null) || surname.length() < 2) {
             Toast.makeText(this, "Plase write your surname!", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             intent = new Intent(this, MainActivity.class);
             intent.putExtra("USER_NAME", name);
             intent.putExtra("SURNAME", surname);

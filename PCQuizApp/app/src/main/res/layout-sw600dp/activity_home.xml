@@ -29,7 +29,7 @@
             android:gravity="center"
             android:text="@string/computer_knowledge"
             android:textColor="#ffffff"
-            android:textSize="32sp" />
+            android:textSize="64sp" />
 
 
         <ImageView
@@ -50,7 +50,7 @@
             android:gravity="center"
             android:text="@string/welcome_to_the_pcquizapp"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/detailTextview"
@@ -59,7 +59,8 @@
             android:layout_below="@id/nameTextview"
             android:gravity="center"
             android:text="@string/insert_your_name_and_surname_to_start_the_quiz"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="30sp"/>
 
         <EditText
             android:id="@+id/name_edittext"
@@ -73,6 +74,7 @@
             android:hint="@string/insert_your_name"
             android:inputType="text"
             android:maxLines="1"
+            android:textSize="30sp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff" />
 
@@ -85,6 +87,7 @@
             android:layout_marginTop="15dp"
             android:backgroundTint="#007fff"
             android:gravity="center"
+            android:textSize="30sp"
             android:hint="@string/insert_your_surname"
             android:inputType="text"
             android:maxLines="1"
@@ -98,7 +101,9 @@
             android:layout_below="@id/surname_edittext"
             android:layout_centerHorizontal="true"
             android:onClick="startActivity"
-            android:text="@string/start" />
+            android:text="@string/start"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp" />
 
     </RelativeLayout>
 

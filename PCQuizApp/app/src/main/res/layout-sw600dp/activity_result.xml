@@ -27,7 +27,7 @@
             android:gravity="center"
             android:text="@string/congratulations"
             android:textColor="#FFFFFF"
-            android:textSize="32sp" />
+            android:textSize="64sp" />
 
         <TextView
             android:id="@+id/scoreTextView"
@@ -39,7 +39,7 @@
             android:gravity="center"
             android:text="@string/your_score_is_in_percentage"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/percentageTextView"
@@ -51,7 +51,7 @@
             android:gravity="center"
             android:text="@string/_100"
             android:textColor="#FFFFFF"
-            android:textSize="70sp" />
+            android:textSize="140sp" />
 
         <TextView
             android:id="@+id/detailsTextView"
@@ -65,7 +65,7 @@
             android:gravity="center"
             android:text="@string/a_good_score_keep_up_the_good_work"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/participationTextView"
@@ -76,7 +76,8 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="@string/thank_you_for_participating_to_this_quiz"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -91,7 +92,8 @@
                 android:layout_below="@id/participationTextView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:text="@string/retake_the_test" />
+                android:text="@string/retake_the_test"
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/shareButton"
@@ -100,7 +102,8 @@
                 android:layout_below="@id/retakeTestButton"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:text="@string/share_your_score" />
+                android:text="@string/share_your_score"
+                android:textSize="25sp" />
 
         </LinearLayout>
 

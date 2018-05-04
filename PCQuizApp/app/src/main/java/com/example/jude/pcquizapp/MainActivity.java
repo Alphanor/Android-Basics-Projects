@@ -14,16 +14,35 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
 public class MainActivity extends AppCompatActivity {
 
     Spinner spinner, spinner2;
-    RadioButton firstAnswerFirstQuestion, secondAnswerFirstQuestion, thirdAnswerFirstQuestion, firstAnswerThirdQuestion, secondAnswerThirdQuestion, thirdAnswerThirdQuestion, firstAnswerSeventhQuestion, secondAnswerSeventhQuestion, thirdAnswerSeventhQuestion, forthAnswerSeventhQuestion;
-    CheckBox firstAnswerFifthQuestion, secondAnswerFifthQuestion, thirdAnswerFifthQuestion, firstAnswerEighthQuestion, secondAnswerEighthQuestion, thirdAnswerEighthQuestion, forthAnswerEighthQuestion;
-    EditText secondAnswer, sixthAnswer;
+    RadioButton firstAnswerFirstQuestion;
+    RadioButton secondAnswerFirstQuestion;
+    RadioButton thirdAnswerFirstQuestion;
+    RadioButton firstAnswerThirdQuestion;
+    RadioButton secondAnswerThirdQuestion;
+    RadioButton thirdAnswerThirdQuestion;
+    RadioButton firstAnswerSeventhQuestion;
+    RadioButton secondAnswerSeventhQuestion;
+    RadioButton thirdAnswerSeventhQuestion;
+    RadioButton forthAnswerSeventhQuestion;
+    CheckBox firstAnswerFifthQuestion;
+    CheckBox secondAnswerFifthQuestion;
+    CheckBox thirdAnswerFifthQuestion;
+    CheckBox firstAnswerEighthQuestion;
+    CheckBox secondAnswerEighthQuestion;
+    CheckBox thirdAnswerEighthQuestion;
+    CheckBox forthAnswerEighthQuestion;
+    EditText secondAnswer;
+    EditText sixthAnswer;
     Button sendResult;
-    float score=0;
-    String comparation;
-    ArrayAdapter<CharSequence> adapter, adapter2;
+    float score;
+    String comparison;
+    ArrayAdapter<CharSequence> adapter;
+    ArrayAdapter<CharSequence> adapter2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         firstAnswerEighthQuestion = (CheckBox) findViewById(R.id.firstAnswerEighthQuestion);
         secondAnswerEighthQuestion = (CheckBox) findViewById(R.id.secondAnswerEighthQuestion);
         thirdAnswerEighthQuestion = (CheckBox) findViewById(R.id.thirdAnswerEighthQuestion);
+        forthAnswerEighthQuestion = (CheckBox) findViewById(R.id.forthAnswerEighthQuestion);
 
         secondAnswer = (EditText) findViewById(R.id.editTextSecondQuestion);
         sixthAnswer = (EditText) findViewById(R.id.editTextSixthAnswer);
@@ -75,44 +95,38 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendResult() {
 
-        if(firstAnswerFirstQuestion.isChecked())
-            score+=1;
+        if (firstAnswerFirstQuestion.isChecked())
+            score += 1;
 
-        comparation = secondAnswer.getText().toString().toLowerCase();
+        comparison = secondAnswer.getText().toString().toLowerCase();
 
-        if(comparation.toLowerCase().equals("basic input output system"))
-            score+=1;
+        if (comparison.equals("basic input output system"))
+            score += 1;
 
-        if(secondAnswerThirdQuestion.isChecked())
-            score+=1;
+        if (secondAnswerThirdQuestion.isChecked())
+            score += 1;
 
-        if(spinner.getSelectedItem().equals("Intel"))
-            score+=1;
+        if (spinner.getSelectedItem().equals("Intel"))
+            score += 1;
 
-        if(secondAnswerFifthQuestion.isChecked())
-            score+=0.5;
+        if (secondAnswerFifthQuestion.isChecked() && thirdAnswerFifthQuestion.isChecked())
+            score += 1;
 
-        if(thirdAnswerFifthQuestion.isChecked())
-            score+=0.5;
+        comparison = sixthAnswer.getText().toString().toLowerCase();
 
-        comparation = sixthAnswer.getText().toString().toLowerCase();
+        if (comparison.equals("graphic processing unit"))
+            score += 1;
 
-        if(comparation.toLowerCase().equals("graphic processing unit"))
-            score+=1;
+        if (firstAnswerSeventhQuestion.isChecked())
+            score += 1;
 
-        if(firstAnswerSeventhQuestion.isChecked())
-            score+=1;
+        if (firstAnswerEighthQuestion.isChecked() && secondAnswerEighthQuestion.isChecked())
+            score += 1;
 
-        if(firstAnswerEighthQuestion.isChecked())
-            score+=0.5;
+        if (spinner2.getSelectedItem().equals("Bill Gates"))
+            score += 1;
 
-        if(secondAnswerEighthQuestion.isChecked())
-            score+=0.5;
-
-        if(spinner2.getSelectedItem().equals("Bill Gates"))
-            score+=1;
-
-        Toast.makeText(this, "You final result is "+score+" out of 9!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You final result is " + score + " out of 9!", Toast.LENGTH_LONG).show();
 
         String name = getIntent().getStringExtra("USER_NAME");
         String surname = getIntent().getStringExtra("SURNAME");
@@ -120,22 +134,22 @@ public class MainActivity extends AppCompatActivity {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.icon)
-                        .setContentTitle("Dear "+name+" "+surname)
-                        .setContentText("Your final result is "+score+" out of 9!");
+                        .setContentTitle("Dear " + name + " " + surname)
+                        .setContentText("Your final result is " + score + " out of 9!");
 
         NotificationManager mNotifyMgr =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-        mNotifyMgr.notify(001, mBuilder.build());
+        mNotifyMgr.notify(10, mBuilder.build());
 
-        String percentage = String.format("%.2f", (score/9)*100);
+        String percentage = String.format("%.2f", (score / 9) * 100);
 
         Intent intent = new Intent(this, Result.class);
         intent.putExtra("percentage_result", percentage);
         intent.putExtra("score", String.valueOf(score));
         startActivity(intent);
 
-        score=0;
+        score = 0;
     }
 
 }
