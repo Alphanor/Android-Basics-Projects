@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/article_view"
+    android:layout_height="110dp"
+    android:paddingBottom="8dp"
+    android:paddingEnd="8dp"
+    android:paddingLeft="8dp"
+    android:paddingStart="8dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        tools:text="Lorem ipsum dolor sit amet consecuectuer adipiscing" />
+
+    <TextView
+        android:id="@+id/article_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:maxLines="1"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        tools:text="Politics" />
+
+    <TextView
+        android:id="@+id/article_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:maxLines="1"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        tools:text="22 Mat 2018" />
+
+</RelativeLayout>

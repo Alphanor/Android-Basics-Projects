@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#41CBC7</color>
+    <color name="colorPrimaryDark">#41CBC7</color>
+    <color name="colorAccent">#4EA1D1</color>
+
+    <color name="technology_section_color">#4EA1D1</color>
+    <color name="world_news_section_color">#4874A8</color>
+    <color name="life_and_style_section_color">#595386</color>
+    <color name="gnm_press_office_section_color">#524365</color>
+    <color name="default_section_color">#F0F0F0</color>
+</resources>
