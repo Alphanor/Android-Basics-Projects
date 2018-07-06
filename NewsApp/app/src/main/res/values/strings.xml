@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">Earthquake Settings</string>
+
+    <string name="settings_page_size_label">Number Of Articles</string>
+
+    <string name="settings_page_size_key">pageSize</string>
+    <string name="settings_page_size_default">20</string>
+
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">orderBy</string>
+    <string name="settings_order_by_default">Relevance</string>
+
+    <string name="settings_order_by_newest_label">Newest</string>
+    <string name="settings_order_by_newest_value">newest</string>
+
+    <string name="settings_order_by_oldest_label">Oldest</string>
+    <string name="settings_order_by_oldest_value">oldest</string>
+
+    <string name="settings_order_by_relevance_label">Relevance</string>
+    <string name="settings_order_by_relevance_value">relevance</string>
+    <string name="no_connnection">No Internet connection!</string>
+    <string name="no_news_available">There aren\'t news available right now!</string>
+
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_order_by_newest_label</item>
+        <item>@string/settings_order_by_oldest_label</item>
+        <item>@string/settings_order_by_relevance_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_order_by_newest_value</item>
+        <item>@string/settings_order_by_oldest_value</item>
+        <item>@string/settings_order_by_relevance_value</item>
+    </string-array>
 </resources>

@@ -10,12 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class ArticleAdapter extends ArrayAdapter<Article> {
 
@@ -26,7 +29,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if(convertView == null) {
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.article_list_item, parent, false);
         }
 
@@ -36,43 +39,31 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
         TextView articleSection = convertView.findViewById(R.id.article_section);
 
+        TextView articleAuthor = convertView.findViewById(R.id.author_name);
+
         TextView articleData = convertView.findViewById(R.id.article_data);
 
         articleTitle.setText(article.getTitle());
 
         articleSection.setText(article.getNameSection());
 
-        RelativeLayout articleView = convertView.findViewById(R.id.article_view);
+        articleAuthor.setText(article.getAuthor());
 
-        articleView.setBackgroundColor(getArticleColor(article.getNameSection()));
+        String formattedDate = formatDate(article.getDataPublished());
 
-        Log.d("dsd", article.getNameSection());
-
-        articleData.setText(article.getDataPublished());
+        articleData.setText(formattedDate);
 
         return convertView;
     }
 
-    private int getArticleColor(String section) {
-        int sectionColorId;
-        switch(section) {
-            case "Technology":
-                sectionColorId = R.color.technology_section_color;
-                break;
-            case "World news":
-                sectionColorId = R.color.world_news_section_color;
-                break;
-            case "Media":
-                sectionColorId = R.color.life_and_style_section_color;
-                break;
-            case "GNM press office":
-                sectionColorId = R.color.gnm_press_office_section_color;
-                break;
-            default:
-                sectionColorId = R.color.default_section_color;
-                break;
+    private String formatDate(String date) {
+        SimpleDateFormat jsonFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
+        try {
+            Date parsedJson = jsonFormat.parse(date);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("LLL dd, yyyy", Locale.US);
+            return dateFormat.format(parsedJson);
+        } catch (ParseException e) {
+            return null;
         }
-
-        return sectionColorId;
     }
 }

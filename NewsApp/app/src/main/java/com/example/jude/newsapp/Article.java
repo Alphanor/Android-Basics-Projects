@@ -8,11 +8,14 @@ public class Article {
 
     private String dataPublished;
 
+    private String author;
+
     private String url;
 
-    public Article(String title, String nameSection, String dataPublished, String url) {
+    public Article(String title, String nameSection, String author, String dataPublished, String url) {
         this.title = title;
         this.nameSection = nameSection;
+        this.author = author;
         this.dataPublished = dataPublished;
         this.url = url;
     }
@@ -23,6 +26,10 @@ public class Article {
 
     public String getNameSection() {
         return nameSection;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     public String getDataPublished() {

@@ -45,6 +45,8 @@ public class QueryUtils {
 
     public static List<Article> extractFromJson(String newsJSON) {
 
+        String author="";
+
         if (TextUtils.isEmpty(newsJSON)) {
             return null;
         }
@@ -55,13 +57,13 @@ public class QueryUtils {
 
             JSONObject baseJsonResponse = new JSONObject(newsJSON);
 
-            JSONObject responseJsonObject = baseJsonResponse.getJSONObject("response");
+            JSONObject response = baseJsonResponse.getJSONObject("response");
 
-            JSONArray articleArray = responseJsonObject.getJSONArray("results");
+            JSONArray results = response.getJSONArray("results");
 
-            for (int i = 0; i < articleArray.length(); i++) {
+            for (int i = 0; i < results.length(); i++) {
 
-                JSONObject currentArticle = articleArray.getJSONObject(i);
+                JSONObject currentArticle = results.getJSONObject(i);
 
                 String sectionName = currentArticle.getString("sectionName");
 
@@ -71,7 +73,31 @@ public class QueryUtils {
 
                 String url = currentArticle.getString("webUrl");
 
-                Article article = new Article(webTitle, sectionName, time, url);
+                JSONArray tags = currentArticle.getJSONArray("tags");
+
+                if(tags.length() == 0)
+                    author = "Unknown";
+
+                else {
+
+                    for (int j = 0; j < tags.length(); j++) {
+
+                        try {
+
+                            JSONObject authorName = tags.getJSONObject(j);
+
+                            author = authorName.getString("webTitle");
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }
+
+                Article article = new Article(webTitle, sectionName, author, time, url);
 
                 articles.add(article);
             }
