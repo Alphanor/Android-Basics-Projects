@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Inventory App 1</string>
+    <string name="product_name">PRODUCT NAME</string>
+    <string name="product_quantity">PRODUCT QUANTITY</string>
+    <string name="supplier_phone_number">SUPPLIER PHONE NUMBER</string>
+    <string name="product_price">PRODUCT PRICE</string>
+    <string name="supplier_name">SUPPLIER NAME</string>
+</resources>
