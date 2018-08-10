@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">InventoryApp2</string>
+
+    <string name="product_name">PRODUCT NAME</string>
+    <string name="product_quantity">PRODUCT QUANTITY</string>
+    <string name="product_category">PRODUCT CATEGORY</string>
+    <string name="supplier_phone_number">SUPPLIER PHONE NUMBER</string>
+    <string name="product_price">PRODUCT PRICE</string>
+    <string name="supplier_name">SUPPLIER NAME</string>
+
+
+
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_delete_all_entries">Delete All Items</string>
+
+    <string name="editor_insert_item_successful">Item saved</string>
+    <string name="editor_insert_item_failed">Error with saving item</string>
+
+    <string name="editor_update_item_successful">Item updated</string>
+    <string name="editor_update_item_failed">Error with updating item</string>
+
+    <string name="editor_delete_item_successful">Pet deleted</string>
+    <string name="editor_delete_item_failed">Error with deleting pet</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+
+    <!-- Dialog button text for the option to keep editing the current pet [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+</resources>
